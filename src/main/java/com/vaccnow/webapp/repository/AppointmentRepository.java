@@ -17,7 +17,7 @@ import com.vaccnow.webapp.model.AppointmentId;
 public interface AppointmentRepository extends CrudRepository<Appointment, AppointmentId> {
 
 	@Query(value = "select * from Appointments app , time_slots ts where app.slot_id = ts.id"
-			+ " and ts.date <= ?1 and app.is_vaccinated = 0 and ts.start_time <= ?2", nativeQuery = true)
+			+ " and ts.date = ?1 and app.is_vaccinated = 0 and ts.start_time <= ?2", nativeQuery = true)
 	List<Appointment> getCurrentAppointments(LocalDate date, LocalTime time);
 
 	@Query(value = "select * from Appointments app , time_slots ts where app.slot_id = ts.id"

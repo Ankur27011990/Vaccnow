@@ -15,7 +15,6 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.vaccnow.webapp.model.TimeSlot;
 import com.vaccnow.webapp.model.VaccinationCentre;
-import com.vaccnow.webapp.repository.TimeSlotRepository;
 
 @ExtendWith(SpringExtension.class)
 @DataJpaTest

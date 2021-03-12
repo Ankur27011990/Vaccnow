@@ -16,7 +16,10 @@ import com.vaccnow.webapp.model.Appointment;
 import com.vaccnow.webapp.repository.AppointmentRepository;
 import com.vaccnow.webapp.service.ReportingService;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Service
+@Slf4j
 public class ReportingServiceImpl implements ReportingService {
 
 	@Autowired
@@ -24,6 +27,7 @@ public class ReportingServiceImpl implements ReportingService {
 
 	@Override
 	public PageResponse<ScheduledVaccinationDTO> getAppointmentsForCentre(int centreId, int pageNumber, int pageSize) {
+		log.debug("Retrieving all the appointments for Centre {}", centreId);
 		Page<Appointment> appointmentsPage = repository.getAppointmentsForCentre(centreId,
 				PageRequest.of(pageNumber, pageSize));
 
@@ -38,6 +42,7 @@ public class ReportingServiceImpl implements ReportingService {
 	@Override
 	public PageResponse<ScheduledVaccinationDTO> getAppointmentsForPeriod(LocalDate startDate, LocalDate endDate,
 			int pageNumber, int pageSize) {
+		log.debug("Retrieving all the appointments for period with start date: {} and end date: {}", startDate, endDate);
 		Page<Appointment> appointmentsPage = repository.getAppointmentsForPeriod(startDate, endDate,
 				PageRequest.of(pageNumber, pageSize));
 
@@ -52,6 +57,7 @@ public class ReportingServiceImpl implements ReportingService {
 	@Override
 	public PageResponse<CompletedVaccinationDTO> getCompletedVaccinationsForPeriod(LocalDate startDate,
 			LocalDate endDate, int pageNumber, int pageSize) {
+		log.debug("Retrieving all the completed appointments for period with start date: {} and end date: {}", startDate, endDate);
 		Page<Appointment> appointmentsPage = repository.getCompletedVaccinationsForPeriod(startDate, endDate,
 				PageRequest.of(pageNumber, pageSize));
 

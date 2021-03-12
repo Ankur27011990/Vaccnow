@@ -4,7 +4,6 @@ import java.time.LocalDate;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,7 +17,7 @@ import com.vaccnow.webapp.dto.ScheduledVaccinationDTO;
 import com.vaccnow.webapp.service.ReportingService;
 
 @RestController
-@RequestMapping(path = "/v1/vaccinations", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(path = "/v1/vaccinations")
 public class ReportingController {
 
 	@Autowired

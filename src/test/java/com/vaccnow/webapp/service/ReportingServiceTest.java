@@ -32,7 +32,6 @@ import com.vaccnow.webapp.model.User;
 import com.vaccnow.webapp.model.VaccinationCentre;
 import com.vaccnow.webapp.model.Vaccine;
 import com.vaccnow.webapp.repository.AppointmentRepository;
-import com.vaccnow.webapp.service.ReportingService;
 import com.vaccnow.webapp.service.impl.ReportingServiceImpl;
 
 @ExtendWith(SpringExtension.class)

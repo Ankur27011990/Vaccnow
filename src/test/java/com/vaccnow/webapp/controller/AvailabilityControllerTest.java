@@ -15,7 +15,6 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.vaccnow.webapp.controller.AvailabilityController;
 import com.vaccnow.webapp.dto.AvailabilityDetails;
 import com.vaccnow.webapp.dto.AvailableTimeSlots;
 import com.vaccnow.webapp.dto.PageResponse;

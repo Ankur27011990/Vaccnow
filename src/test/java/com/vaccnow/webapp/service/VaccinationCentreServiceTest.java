@@ -30,7 +30,6 @@ import com.vaccnow.webapp.model.VaccinationCentre;
 import com.vaccnow.webapp.model.Vaccine;
 import com.vaccnow.webapp.repository.VaccinationCentreRepository;
 import com.vaccnow.webapp.repository.VaccineRepository;
-import com.vaccnow.webapp.service.VaccinationCentreService;
 import com.vaccnow.webapp.service.impl.VaccinationCentreServiceImpl;
 
 @ExtendWith(SpringExtension.class)

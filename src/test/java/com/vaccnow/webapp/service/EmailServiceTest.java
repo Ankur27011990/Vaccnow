@@ -6,7 +6,6 @@ import org.mockito.Spy;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.vaccnow.webapp.model.User;
-import com.vaccnow.webapp.service.EmailService;
 import com.vaccnow.webapp.service.impl.EmailServiceImpl;
 
 @ExtendWith(SpringExtension.class)

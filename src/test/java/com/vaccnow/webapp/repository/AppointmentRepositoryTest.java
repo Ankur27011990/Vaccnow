@@ -20,7 +20,6 @@ import com.vaccnow.webapp.model.Appointment;
 import com.vaccnow.webapp.model.TimeSlot;
 import com.vaccnow.webapp.model.User;
 import com.vaccnow.webapp.model.VaccinationCentre;
-import com.vaccnow.webapp.repository.AppointmentRepository;
 
 @ExtendWith(SpringExtension.class)
 @DataJpaTest

@@ -35,8 +35,10 @@ import com.vaccnow.webapp.service.NotificationService;
 import com.vaccnow.webapp.service.TimeSlotService;
 
 import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 
 @Service
+@Slf4j
 public class TimeSlotServiceImpl implements TimeSlotService {
 
 	@Value("#{'${payment-methods}'.split(',')}")
@@ -68,6 +70,7 @@ public class TimeSlotServiceImpl implements TimeSlotService {
 
 	@Override
 	public AvailabilityDetails isAvailable(int centreId, LocalDate date, LocalTime time) {
+		log.debug("Retrieving centreId:{} availability for date: {} and time:{}", centreId, date, time);
 		VaccinationCentre centre = vaccinationCentreRepository.findById(centreId)
 				.orElseThrow(() -> new VaccinationCentreNotFound());
 		TimeSlot timeSlot = timeSlotRepository.findTimeSlotByCentreIdAndDateAndStartTime(centreId, date, time);
@@ -85,6 +88,7 @@ public class TimeSlotServiceImpl implements TimeSlotService {
 	@Transactional
 	public void scheduleAppointment(ScheduleAppointmentRequest appointmentRequest) {
 
+		log.debug("Scheduling appointment with details: {}", appointmentRequest);
 		if (!isValid(appointmentRequest.getPaymentMethod())) {
 			throw new UnsupportedPaymentMethodException();
 		}
@@ -132,6 +136,7 @@ public class TimeSlotServiceImpl implements TimeSlotService {
 
 	@Override
 	public AvailableTimeSlots getAvailableTimeSlots(int centreId, LocalDate date) {
+		log.debug("getAvailableTimeSlots for centreId: {} for date: {}", centreId, date);
 		Optional<VaccinationCentre> centreOpt = vaccinationCentreRepository.findById(centreId);
 		VaccinationCentre centre = centreOpt.orElseThrow(() -> new VaccinationCentreNotFound());
 

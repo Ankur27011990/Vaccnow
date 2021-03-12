@@ -34,7 +34,6 @@ import com.vaccnow.webapp.repository.AppointmentRepository;
 import com.vaccnow.webapp.repository.TimeSlotRepository;
 import com.vaccnow.webapp.repository.UserRepository;
 import com.vaccnow.webapp.repository.VaccinationCentreRepository;
-import com.vaccnow.webapp.service.NotificationService;
 import com.vaccnow.webapp.service.impl.TimeSlotServiceImpl;
 
 @ExtendWith(SpringExtension.class)

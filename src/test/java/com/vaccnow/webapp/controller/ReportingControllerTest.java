@@ -14,7 +14,6 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 
-import com.vaccnow.webapp.controller.ReportingController;
 import com.vaccnow.webapp.dto.CompletedVaccinationDTO;
 import com.vaccnow.webapp.dto.PageResponse;
 import com.vaccnow.webapp.dto.ScheduledVaccinationDTO;

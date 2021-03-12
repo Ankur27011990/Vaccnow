@@ -16,8 +16,6 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import com.vaccnow.webapp.model.TimeSlot;
 import com.vaccnow.webapp.model.User;
 import com.vaccnow.webapp.model.VaccinationCentre;
-import com.vaccnow.webapp.service.EmailService;
-import com.vaccnow.webapp.service.NotificationService;
 import com.vaccnow.webapp.service.impl.NotificationServiceImpl;
 
 @ExtendWith(SpringExtension.class)
