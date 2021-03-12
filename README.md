@@ -28,3 +28,6 @@ Please use availability controller endpoints to get the Vaccination centre & vac
 ### Steps:
 1. mvn clean install
 2. java -jar VaccNow-0.0.1-SNAPSHOT.jar
+
+## ER Diagram:
+![alt text](https://github.com/Ankur27011990/Vaccnow/blob/main/src/main/resources/VaccNow_ERD.PNG)
