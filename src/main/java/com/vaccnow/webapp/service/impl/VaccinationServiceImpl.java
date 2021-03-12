@@ -33,7 +33,7 @@ public class VaccinationServiceImpl implements VaccinationService {
 		log.debug("Performing vaccinations now!");
 
 		// Get All appointments on today which have not been completed and current time is after the start time
-		List<Appointment> appointments = appointmentRepository.getCurrentAppointments(LocalDate.now().plusDays(15), LocalTime.now());
+		List<Appointment> appointments = appointmentRepository.getCurrentAppointments(LocalDate.now(), LocalTime.now());
 
 		appointments.stream().forEach(appointment -> {
 			log.debug("Vaccinating user {}", appointment.getUser().getName());
